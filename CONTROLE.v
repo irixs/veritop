@@ -1,11 +1,11 @@
-module CONTROLE(etapa,tx,ty,tz,tula,clock,estado);
+module CONTROLE(etapa,tx,ty,tz,tula,clock,estado,contador);
 	parameter CLEAR = 4'd0;
 	parameter LOAD = 4'd1;
 	parameter HOLD = 4'd2;
 	parameter SHIFTL = 4'd3;
 
 	input wire clock;
-	input wire[4:0] etapa;
+	input wire[4:0] etapa,contador;
 	output reg[4:0] tx,ty,tz,tula,estado;
 	
 	initial begin
